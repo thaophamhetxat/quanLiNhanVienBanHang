@@ -68,8 +68,11 @@ public class Main {
 
                 }
                 case 4:
-
-
+                    System.exit(0);
+                case 1:
+                    for (Nhanvien i : nhanviens) {
+                        System.out.println(i);
+                    }
             }
 
         }

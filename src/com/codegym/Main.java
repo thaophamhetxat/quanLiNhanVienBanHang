@@ -6,7 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Nhanvien[] nhanviens = new Nhanvien[0];
+        Nhanvien[] nhanviens = new Nhanvien[2];
+
+
         int choise;
         while (true) {
             System.out.println("QUAN LI NHAN VIEN BAN HANG");
@@ -25,7 +27,7 @@ public class Main {
                     int select = scanner.nextInt();
                     switch (select) {
                         case 1:
-                            Manager.createFull(nhanviens);
+                            nhanviens=Manager.createFull(nhanviens);
                             break;
                         case 2:
                             Manager.editNV(nhanviens);

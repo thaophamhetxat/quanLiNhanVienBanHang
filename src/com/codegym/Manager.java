@@ -20,9 +20,11 @@ public class Manager {
 
         System.out.println("Email: ");
         String Email = scanner.nextLine();
+        System.out.println("WorkTime: ");
+        int WorkTime = Integer.parseInt(scanner.nextLine());
 
 
-        Nhanvien nhanvien = new NhanVienParkTime(MaNV, Name, Age, Phone, Email);
+        Nhanvien nhanvien = new NhanVienParkTime(MaNV, Name, Age, Phone, Email,WorkTime);
         Nhanvien[] newPark = new Nhanvien[arr.length + 1];
         for (int i = 0; i < arr.length; i++) {
             newPark[i] = arr[i];
@@ -33,7 +35,7 @@ public class Manager {
 
 
     }
-    public static void createFull(Nhanvien[]arr){
+    public static Nhanvien[] createFull(Nhanvien[]arr){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ma nhan vien: ");
         int MaNV = Integer.parseInt(scanner.nextLine());
@@ -54,12 +56,13 @@ public class Manager {
         System.out.println("UnBonus: ");
         int UnBonus = Integer.parseInt(scanner.nextLine());
 
-        Nhanvien nhanvien = new NhanvienFullTime(MaNV, Name, Age, Phone, Email,Salary);
+        Nhanvien nhanvien = new NhanvienFullTime(MaNV, Name, Age, Phone, Email,Salary,Bonus,UnBonus);
         Nhanvien[] newFull = new Nhanvien[arr.length + 1];
         for (int i = 0; i < arr.length; i++) {
             newFull[i] = arr[i];
         }
         newFull[newFull.length - 1] = nhanvien;
+        return newFull;
     }
 
     public static void editNV(Nhanvien[] arr) {

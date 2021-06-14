@@ -10,8 +10,9 @@ public class NhanVienParkTime extends Nhanvien {
         WorkTime = workTime;
     }
 
-    public NhanVienParkTime(int maNV, String name, int age, int phone, String email) {
+    public NhanVienParkTime(int maNV, String name, int age, int phone, String email,int WorkTime) {
         super(maNV, name, age, phone, email);
+        this.WorkTime = WorkTime;
     }
 
 
@@ -28,13 +29,13 @@ public class NhanVienParkTime extends Nhanvien {
     }
     @Override
     public String toString() {
-        return "NhanVienParkTime{" +super.toString()+
+        return "NhanVienParkTime{" +
                 "WorkTime=" + WorkTime +
                 ", MaNV=" + MaNV +
                 ", Name='" + Name + '\'' +
                 ", Age=" + Age +
                 ", SDT=" + Phone +
                 ", Email='" + Email + '\'' +
-                '}';
+                '}'+" ={"+" luong thuc linh = "+SumSalary()+'}';
     }
 }

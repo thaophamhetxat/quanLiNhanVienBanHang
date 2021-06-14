@@ -1,21 +1,25 @@
 package com.codegym;
 
-public class NhanvienFullTime extends Nhanvien{
+public class NhanvienFullTime extends Nhanvien {
     int Bonus;
     int UnBonus;
     int Salary;
-    public NhanvienFullTime(){
+
+    public NhanvienFullTime() {
 
     }
+
     public NhanvienFullTime(int bonus, int unBonus, int salary) {
         this.Bonus = bonus;
         this.UnBonus = unBonus;
         this.Salary = salary;
     }
 
-    public NhanvienFullTime(int maNV, String name, int age, int phone, String email,int salary) {
+    public NhanvienFullTime(int maNV, String name, int age, int phone, String email, int salary, int Bonus, int UnBonus) {
         super(maNV, name, age, phone, email);
         this.Salary = salary;
+        this.UnBonus = UnBonus;
+        this.Bonus = Bonus;
     }
 
     public int getBonus() {
@@ -41,13 +45,14 @@ public class NhanvienFullTime extends Nhanvien{
     public void setSalary(int salary) {
         this.Salary = salary;
     }
-    public int SumBonus(){
-        return this.Salary*(this.Bonus-this.UnBonus);
+
+    public int SumBonus() {
+        return this.Salary + (this.Bonus - this.UnBonus);
     }
 
     @Override
     public String toString() {
-        return "NhanvienFullTime{" +super.toString()+
+        return "NhanvienFullTime{" +
                 "MaNV=" + MaNV +
                 ", Name='" + Name + '\'' +
                 ", Age=" + Age +
@@ -56,7 +61,8 @@ public class NhanvienFullTime extends Nhanvien{
                 ", Bonus=" + Bonus +
                 ", UnBonus=" + UnBonus +
                 ", Salary=" + Salary +
-                '}';
+                '}' + " {" +
+                "Luong thuc linh = " + SumBonus() + '}';
     }
 
 

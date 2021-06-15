@@ -20,7 +20,8 @@ public class Main {
             choise = scanner.nextInt();
             switch (choise) {
                 case 2: {
-                    System.out.println("1. Add Nhan vien ");
+                    System.out.println("NHAN VIEN FULL TIME");
+                    System.out.println("1. Add ");
                     System.out.println("2. Edit ");
                     System.out.println("3. Delete ");
                     System.out.println("4. Show ");
@@ -44,7 +45,8 @@ public class Main {
                     break;
                 }
                 case 3: {
-                    System.out.println("1. Add Nhan vien");
+                    System.out.println("NHAN VIEN PARK TIME");
+                    System.out.println("1. Add ");
                     System.out.println("2. Edit ");
                     System.out.println("3. Delete ");
                     System.out.println("4. Show ");
